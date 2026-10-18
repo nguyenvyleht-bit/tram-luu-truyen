@@ -1,0 +1,120 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#671a22">
+<title>Trạm Lưu Truyền | Không gian số tri ân</title>
+<style>
+:root{--red:#671a22;--red2:#8d202b;--gold:#d8b56d;--cream:#fff8e9;--ink:#352321;--muted:#756764}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Segoe UI",Tahoma,sans-serif;background:#fffaf1;color:var(--ink);line-height:1.6}
+a{color:inherit}button,input,textarea{font:inherit}
+.topbar{background:#4e1118;color:#fff4da;padding:9px 5%;font-size:.86rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{background:linear-gradient(120deg,#671a22,#8d202b);color:#fff8e9;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:3px solid var(--gold)}
+.brand{display:flex;align-items:center;gap:12px}.brandmark{width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:1.6rem}
+.brand strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;letter-spacing:.04em}.brand small{color:#f3dca6}
+nav{display:flex;gap:16px;flex-wrap:wrap}nav a{text-decoration:none;color:#fff3d8;font-size:.93rem}nav a:hover{color:#fff}
+.hero{position:relative;background:#4e1118;overflow:hidden}.hero img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center}
+.hero-note{display:none}
+main{max-width:1120px;margin:auto;padding:30px 20px 55px}.intro{text-align:center;margin:12px auto 28px;max-width:780px}.eyebrow{color:#9b6e28;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:700}.intro h1{font-family:Georgia,"Times New Roman",serif;color:var(--red);font-size:clamp(1.45rem,3.1vw,2.25rem);line-height:1.3;margin:8px auto;max-width:900px;overflow-wrap:normal;word-break:normal}.intro p{color:#695553;margin:8px auto}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}.stat{background:white;border:1px solid #eadbc0;border-radius:14px;padding:17px;text-align:center}.stat strong{display:block;color:var(--red);font-size:1.8rem}.stat span{color:var(--muted);font-size:.9rem}
+.section{margin:42px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}.section h2{font-family:Georgia,"Times New Roman",serif;color:var(--red);font-size:1.7rem;margin:0}.section-head p{margin:4px 0;color:var(--muted)}
+.card{background:white;border:1px solid #eadbc0;border-radius:16px;padding:22px;box-shadow:0 6px 20px #4c21100a}.mother-grid{display:grid;grid-template-columns:240px 1fr;gap:22px;align-items:start}.portrait-placeholder{min-height:280px;border-radius:12px;background:linear-gradient(145deg,#e7dcc8,#b7a78d);display:grid;place-items:center;text-align:center;color:#514039;padding:20px}.portrait-placeholder span{font-size:3rem;display:block}.mother-info h3{font-family:Georgia,"Times New Roman",serif;color:var(--red);font-size:1.55rem;margin:0 0 8px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}.fact{background:#fff8e9;padding:10px;border-radius:9px;font-size:.92rem}.fact b{display:block;color:#6f2929;font-size:.8rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:999px;background:var(--red);color:white;padding:10px 17px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn.secondary{background:#fff4d9;color:#642029;border:1px solid #d8b56d}.btn:hover{filter:brightness(1.08)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.candle-box{text-align:center;background:linear-gradient(150deg,#fff8e8,#f6e6c6)}.candle{font-size:3rem;line-height:1.2}.candle-count{font-size:2.3rem;font-weight:750;color:var(--red)}.small{font-size:.84rem;color:var(--muted)}
+form{display:grid;gap:12px}label{font-weight:650;font-size:.92rem}input,textarea{width:100%;border:1px solid #dccdb5;border-radius:9px;padding:11px;background:#fffdf8;color:var(--ink)}textarea{min-height:100px;resize:vertical}
+.entries{display:grid;gap:10px;margin-top:14px}.entry{border-left:3px solid var(--gold);padding:10px 13px;background:#fffaf1;border-radius:0 8px 8px 0}.entry b{color:var(--red)}.entry p{margin:4px 0}
+footer{background:#4e1118;color:#f7e9ce;text-align:center;padding:28px 18px;border-top:3px solid var(--gold)}footer strong{font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;color:#e8ca87}footer p{margin:6px auto;max-width:800px;font-size:.9rem}
+.notice{padding:12px 14px;border-radius:10px;background:#fff4d9;border:1px solid #ead4a6;color:#694c27;font-size:.88rem;margin-top:12px}
+@media(max-width:720px){.topbar{justify-content:center;text-align:center}header{justify-content:center;text-align:center}.brand{justify-content:center}nav{justify-content:center}.hero img{min-height:0;object-fit:contain}.hero-note{font-size:.75rem;bottom:8px}.stats{grid-template-columns:1fr}.mother-grid,.two-col{grid-template-columns:1fr}.portrait-placeholder{min-height:200px}.facts{grid-template-columns:1fr 1fr}.section{margin:30px 0}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>ĐOÀN TNCS HỒ CHÍ MINH · XÃ HẢI LĂNG</span><span>Không gian số tri ân các Mẹ Việt Nam Anh hùng</span></div>
+<header>
+  <div class="brand"><div class="brandmark" aria-hidden="true">✿</div><div><strong>TRẠM LƯU TRUYỀN</strong><small>Mạch nguồn lịch sử, tiếp nối tri ân</small></div></div>
+  <nav aria-label="Điều hướng"><a href="#me">Về các Mẹ</a><a href="#thapnen">Thắp nến</a><a href="#loitrian">Lời tri ân</a><a href="#tulieu">Gửi tư liệu</a></nav>
+</header>
+<section class="hero" aria-label="Ảnh bìa Trạm Lưu Truyền">
+  <img src="banner-tram-luu-truyen.png" alt="Ảnh bìa Trạm Lưu Truyền với chân dung Mẹ, ngọn nến, hoa sen và cờ đỏ sao vàng">
+  <div class="hero-note">Ảnh bìa thiết kế minh họa — khi công bố chính thức, thay bằng ảnh tư liệu gốc đã được xác minh của Mẹ Trần Thị Mít.</div>
+</section>
+<main>
+  <div class="intro">
+    <div class="eyebrow">Không gian số tri ân · Xã Hải Lăng, Quảng Trị</div>
+    <h1>Gìn giữ ký ức bằng trái tim –<br>Lan tỏa tri ân bằng công nghệ số.</h1>
+    <p>Nơi lưu giữ tư liệu, câu chuyện và những lời tưởng niệm dành cho các Mẹ Việt Nam Anh hùng; để sự hy sinh cao cả luôn được các thế hệ ghi nhớ.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong id="motherTotal">01</strong><span>Hồ sơ Mẹ đang giới thiệu</span></div>
+    <div class="stat"><strong id="candleTotal">0</strong><span>Lượt thắp nến trên thiết bị này</span></div>
+    <div class="stat"><strong id="tributeTotal">0</strong><span>Lời tri ân trên thiết bị này</span></div>
+  </div>
+  <section class="section" id="me">
+    <div class="section-head"><div><div class="eyebrow">Hồ sơ mở đầu</div><h2>Mẹ Việt Nam Anh hùng Trần Thị Mít</h2><p>Một đời hy sinh, muôn đời ghi nhớ.</p></div></div>
+    <div class="card mother-grid">
+      <div class="portrait-placeholder"><div><span>🕊️</span><b>Ảnh tư liệu của Mẹ</b><p class="small">Sẽ thay bằng ảnh gốc rõ nét, giữ nguyên khuôn mặt và đặc điểm ảnh.</p></div></div>
+      <div class="mother-info">
+        <h3>Mẹ Trần Thị Mít</h3>
+        <p>Thông tin bước đầu theo trang tư liệu m cung cấp. Cần đối chiếu hồ sơ lịch sử chính thức trước khi công bố đầy đủ.</p>
+        <div class="facts">
+          <div class="fact"><b>Năm sinh</b>1900</div>
+          <div class="fact"><b>Năm mất</b>2005</div>
+          <div class="fact"><b>Nguyên quán theo tư liệu</b>Hải Phú, Quảng Trị</div>
+          <div class="fact"><b>Nơi thờ phụng theo tư liệu</b>Hải Phú, Quảng Trị</div>
+        </div>
+        <p><b>Ghi nhận lịch sử:</b> Tư liệu m gửi ghi Mẹ có chồng và sáu người con là liệt sĩ. Nội dung chi tiết sẽ được kiểm chứng, biên tập và bổ sung cùng nguồn tư liệu trước khi đăng chính thức.</p>
+        <div class="actions"><button class="btn" id="profileCandle">🕯️ Thắp nến tri ân</button><a class="btn secondary" href="#loitrian">Gửi lời tri ân</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="section two-col" id="thapnen">
+    <div class="card candle-box">
+      <div class="eyebrow">Nén tâm hương trực tuyến</div><div class="candle">🕯️</div>
+      <h2>Thắp một ngọn nến</h2>
+      <p>Mỗi ngọn nến là một lời tưởng nhớ và biết ơn.</p>
+      <div class="candle-count" id="candleNumber">0</div><p class="small">Lượt thắp nến được lưu trên trình duyệt hiện tại, chưa phải số liệu cộng đồng.</p>
+      <button class="btn" id="candleButton">Thắp nến tri ân</button>
+    </div>
+    <div class="card" id="loitrian">
+      <div class="eyebrow">Sổ lưu bút trực tuyến</div><h2>Gửi lời tri ân</h2>
+      <form id="tributeForm">
+        <div><label for="tributeName">Họ và tên</label><input id="tributeName" required maxlength="80" placeholder="Nhập họ tên của m"></div>
+        <div><label for="tributeUnit">Đơn vị / trường / chi đoàn (không bắt buộc)</label><input id="tributeUnit" maxlength="120" placeholder="Tên đơn vị"></div>
+        <div><label for="tributeMessage">Lời tri ân</label><textarea id="tributeMessage" required maxlength="600" placeholder="Viết lời tưởng niệm của m..."></textarea></div>
+        <button class="btn" type="submit">Gửi lời tri ân</button>
+      </form>
+      <div class="notice">Bản thử nghiệm: lời nhắn chỉ lưu trên trình duyệt của thiết bị này, chưa được gửi đến máy chủ hoặc công khai cho người khác.</div>
+      <div class="entries" id="entries"></div>
+    </div>
+  </section>
+  <section class="section" id="tulieu">
+    <div class="section-head"><div><div class="eyebrow">Cùng bổ sung tư liệu</div><h2>Gửi thông tin, hình ảnh về các Mẹ</h2><p>Thông tin đóng góp cần được ban quản trị xác minh trước khi cập nhật lên website.</p></div></div>
+    <div class="card">
+      <form id="materialForm">
+        <div><label for="materialName">Tên người gửi</label><input id="materialName" required maxlength="80" placeholder="Họ và tên"></div>
+        <div><label for="materialContact">Thông tin liên hệ (không bắt buộc)</label><input id="materialContact" maxlength="120" placeholder="Số điện thoại hoặc email nếu muốn được liên hệ"></div>
+        <div><label for="materialDetails">Thông tin / nguồn tư liệu muốn cung cấp</label><textarea id="materialDetails" required maxlength="1000" placeholder="Tên Mẹ, nội dung bổ sung, nguồn tài liệu..."></textarea></div>
+        <button class="btn" type="submit">Ghi nhận bản nháp đóng góp</button>
+      </form>
+      <div class="notice">Đây mới là biểu mẫu minh họa. Dữ liệu chưa được gửi đi và chưa có chức năng tải ảnh lên; cần kết nối cơ sở dữ liệu và trang quản trị trước khi sử dụng thật.</div>
+      <p id="materialStatus" class="small" role="status"></p>
+    </div>
+  </section>
+</main>
+<footer><strong>TRẠM LƯU TRUYỀN</strong><p>Gìn giữ ký ức bằng trái tim – Lan tỏa tri ân bằng công nghệ số.</p><p>Không gian số tri ân các Mẹ Việt Nam Anh hùng xã Hải Lăng</p><p class="small">Bản giao diện thử nghiệm · Nội dung lịch sử cần được xác minh trước khi công bố chính thức.</p></footer>
+<script>
+const getNum=(key)=>Number(localStorage.getItem(key)||0);
+const setText=(id,value)=>document.getElementById(id).textContent=value;
+function renderCounters(){setText('candleTotal',getNum('tlt_candles'));setText('candleNumber',getNum('tlt_candles'));setText('tributeTotal',JSON.parse(localStorage.getItem('tlt_tributes')||'[]').length)}
+function lightCandle(){localStorage.setItem('tlt_candles',getNum('tlt_candles')+1);renderCounters()}
+document.getElementById('candleButton').addEventListener('click',lightCandle);
+document.getElementById('profileCandle').addEventListener('click',()=>{lightCandle();document.getElementById('thapnen').scrollIntoView({behavior:'smooth'})});
+function renderEntries(){const list=JSON.parse(localStorage.getItem('tlt_tributes')||'[]');const root=document.getElementById('entries');root.innerHTML='';list.slice().reverse().slice(0,10).forEach(item=>{const div=document.createElement('div');div.className='entry';const b=document.createElement('b');b.textContent=item.name;div.appendChild(b);if(item.unit){const small=document.createElement('span');small.className='small';small.textContent=' · '+item.unit;div.appendChild(small)}const p=document.createElement('p');p.textContent=item.message;div.appendChild(p);root.appendChild(div)});renderCounters()}
+document.getElementById('tributeForm').addEventListener('submit',e=>{e.preventDefault();const list=JSON.parse(localStorage.getItem('tlt_tributes')||'[]');list.push({name:document.getElementById('tributeName').value.trim(),unit:document.getElementById('tributeUnit').value.trim(),message:document.getElementById('tributeMessage').value.trim()});localStorage.setItem('tlt_tributes',JSON.stringify(list));e.target.reset();renderEntries();alert('Đã lưu lời tri ân trên trình duyệt này. Đây chưa phải gửi lên máy chủ.')});
+document.getElementById('materialForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('materialStatus').textContent='Bản nháp đã được ghi nhận tạm thời trên trình duyệt này; chưa gửi đến ban quản trị.';});
+renderEntries();
+</script>
+</body>
+</html>
