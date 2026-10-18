@@ -125,5 +125,32 @@ renderEntries();
 <button onclick="document.getElementById('nhacNen').pause()">
   ⏸ Tạm dừng nhạc
 </button>
+<!-- Nhac nen Trạm Lưu Truyền -->
+<div id="music-player" style="position:fixed;right:18px;bottom:18px;z-index:9999;background:#7f1724;color:#f9e8bd;padding:10px 14px;border:1px solid #e9c878;border-radius:24px;box-shadow:0 4px 14px #0003;">
+  <button id="musicBtn" style="background:none;border:0;color:inherit;font-size:15px;cursor:pointer;">
+    ♫ Bật nhạc tri ân
+  </button>
+  <audio id="tributeMusic" loop preload="none">
+    <source src="Huyền%20Thoại%20Mẹ.mp3" type="audio/mpeg">
+  </audio>
+</div>
+<script>
+  const music = document.getElementById("tributeMusic");
+  const musicBtn = document.getElementById("musicBtn");
+
+  musicBtn.addEventListener("click", async () => {
+    if (music.paused) {
+      try {
+        await music.play();
+        musicBtn.textContent = "Ⅱ Tạm dừng nhạc";
+      } catch (error) {
+        musicBtn.textContent = "Không phát được — kiểm tra file nhạc";
+      }
+    } else {
+      music.pause();
+      musicBtn.textContent = "♫ Bật nhạc tri ân";
+    }
+  });
+</script>
 </body>
 </html>
