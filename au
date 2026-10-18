@@ -131,7 +131,7 @@ renderEntries();
     ♫ Bật nhạc tri ân
   </button>
   <audio id="tributeMusic" loop preload="none">
-    <source src="Huyền%20Thoại%20Mẹ.mp3" type="audio/mpeg">
+   <source src="https://raw.githubusercontent.com/nguyenvyleht-bit/tram-luu-truyen/main/Huy%E1%BB%81n%20Tho%E1%BA%A1i%20M%E1%BA%B9.mp3" type="audio/mpeg">
   </audio>
 </div>
 <script>
